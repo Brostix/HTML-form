@@ -10,7 +10,8 @@
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-</head>
+    <script src="app.js"></script>
+    </head>
 <body class="container">
     <div class="row container fluid">
         <!--Heather-->
@@ -28,7 +29,7 @@
                 <div class="form-group">
                     <label for="ccnumber">Card #</label>
                     <class class="input-group">
-                        <input class="form-control" type="number" placeholder="  XXXXXXXXXXXXXXX" autocomplete="">
+                        <input id="card"class="form-control" type="number" placeholder="  XXXXXXXXXXXXXXX" autocomplete="">
                     </class>
                 </div>
 
@@ -40,7 +41,7 @@
                 <div class="form-group">
                     <label for="ccnumber">CVC #</label>
                     <class class="input-group">
-                        <input class="form-control" type="number" placeholder="  0000" autocomplete="">
+                        <input id="cvc" class="form-control" type="number" placeholder="  0000" autocomplete="">
                     </class>
                 </div>
             </div>
@@ -50,12 +51,8 @@
             <div class="col col-lg-4">
                 <label for="validationServerUsername" class="form-label m-0">Amount</label>
                 <div class="input-group has-validation">
-                    <span class="input-group-text" id="inputGroupPrepend3">$</span>
-                    <input type="number" class="form" id=""
-                        aria-describedby="inputGroupPrepend3 validationServerUsernameFeedback" required>
-                    <div id="" class="invalid-feedback">
-                        Please choose a username.
-                    </div>
+                    <span class="input-group-text">$</span>
+                    <input id="amount" type="number" class="form" >
                 </div>
             </div>
             <!-----AMOUNT------>
@@ -70,12 +67,11 @@
                 <div class="form-group">
                     <label for="ccnumber">First Name</label>
                     <class class="input-group">
-                        <input class="form-control" type="text" placeholder="First Name" autocomplete="" minlength="1" maxlength="15">
+                        <input id="firstname" class="form-control" type="text" placeholder="First Name" autocomplete="" minlength="1" maxlength="15">
                     </class>
                 </div>
 
             </div>
-            <!-----First Name------>
             <!-----Last Name------>
 
             <div class="col col-lg-6">
@@ -83,7 +79,7 @@
                 <div class="form-group">
                     <label for="ccnumber">Last Name</label>
                     <class class="input-group">
-                        <input class="form-control" type="text" placeholder="Last Name" autocomplete="" minlength="0" maxlength="15">
+                        <input id="lastname" class="form-control" type="text" placeholder="Last Name" autocomplete="" minlength="0" maxlength="15">
                     </class>
                 </div>
 
@@ -101,7 +97,7 @@
                 <div class="form-group">
                     <label for="ccnumber">City</label>
                     <class class="input-group">
-                        <input class="form-control" type="text" placeholder="City" autocomplete="">
+                        <input id="city"class="form-control" type="text" placeholder="City" autocomplete="">
                     </class>
                 </div>
 
@@ -110,7 +106,7 @@
             <!-- State  -->
             <div class="col-md-3">
                 <label for="form" class="form-label">State</label>
-                <select class="form-select" id="" aria-describedby="">
+                <select class="form-select" id="state" aria-describedby="">
                     <option selected disabled value="">Choose</option>
                     <option>España</option>
                     <option>Venezuela</option>
@@ -123,9 +119,9 @@
 
                 <div class="form-group">
                     <label for="ccnumber">Postal Code</label>
-                    <class class="input-group">
+                    <class class="input-group" >
                         <!----- max="5" min="1"------>
-                        <input class="form-control" type="number" placeholder="City" autocomplete=""  maxlength="" minlength="" >
+                        <input class="form-control" id="postal" type="number" placeholder="City" autocomplete=""  maxlength="" minlength="" >
                     </class>
                 </div>
 
@@ -138,33 +134,33 @@
         <div class="row align-items-center">
 
             <!--Cards-->
-            <div class="col-4 mb-3">
+            <div class="col-4 mb-3" id="radio">
                 <label for="cards" class="d-block font-weight-bold">We accept:</label>
                 <div class="bg-secondary rounded p-2">
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="cards" id="card1" value="option1">
+                        <input class="form-check-input" type="radio" name="cards"  value="option1">
                         <label class="form-check-label" for="card1"><i
                                 class="fab fa-cc-mastercard text-white"></i></label>
                     </div>
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="cards" id="card2" value="option2">
+                        <input class="form-check-input" type="radio" name="cards"  value="option2">
                         <label class="form-check-label" for="card2"><i class="fab fa-cc-visa text-white"></i></label>
                     </div>
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="cards" id="card3" value="option3">
+                        <input class="form-check-input" type="radio" name="cards"  value="option3">
                         <label class="form-check-label" for="card3"><i
                                 class="fab fa-cc-diners-club text-white"></i></label>
                     </div>
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="cards" id="card4" value="option4">
+                        <input class="form-check-input" type="radio" name="cards" value="option4">
                         <label class="form-check-label" for="card4"><i class="fab fa-cc-amex text-white"></i></label>
                     </div>
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="cards" id="card5" value="option4">
+                        <input class="form-check-input" type="radio" name="cards"  value="option4">
                         <label class="form-check-label" for="card5"><i class="fab fa-cc-paypal text-white"></i></label>
                     </div>
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="cards" id="card6" value="option4">
+                        <input class="form-check-input" type="radio" name="cards"  value="option4">
                         <label class="form-check-label" for="card6"><i class="fab fa-bitcoin text-white"></i></label>
                     </div>
                 </div>
@@ -173,7 +169,7 @@
             <!--message-->
             <div class="col-6 mb-3 offset-2">
                 <label for="msg" class="font-weight-bold">Message</label>
-                <textarea class="form-control" name="msg" rows="3"></textarea>
+                <textarea class="form-control" name="msg" rows="3" id="textarea"></textarea>
                 <p class="small text-muted">Add any note here.</p>
             </div>
         </div>
@@ -181,8 +177,8 @@
 
         <!-- Botones -->
         <div class="d-grid gap-2 d-md-block alert alert-secondary text-end">
-            <button class="btn btn-primary btn btn-danger" type="button">Cancel</button>
-            <button class="btn btn-primary" type="button">Send</button>
+            <button class="btn btn-primary btn btn-danger" id="cancel" type="button">Cancel</button>
+            <button class="btn btn-primary" type="button" onclick="botonFunction()" id="okey">Send</button>
         </div>
     </div>
     </div>
@@ -202,3 +198,15 @@
 </body>
 
 </html>
+
+
+function botonFunction  () {
+  var x, text;
+
+  x = document.querySelector("okey").value;
+
+  if (11 || x > 10) {
+  
+  document.getElementById("okey").innerHTML = text;
+}
+}
