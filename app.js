@@ -87,7 +87,7 @@ const isValidAMOUNT = () => {
     const AMOUNT = document.querySelector("#amount");
     console.log(AMOUNT.value);
     AMOUNT.addEventListener("focusout", event => {
-        checkOnlyNumberCARD(AMOUNT.value)
+        checkOnlyNumberCVC(AMOUNT.value)
             ? validInputStyle(AMOUNT)
             : invalidInputStyle(AMOUNT);
     });
@@ -149,14 +149,12 @@ function botonFunction() {
 
         document.getElementById("okey").innerHTML = text;
     }
-}
-/*
-const AMOUNT = document.querySelector("#amount");
-    console.log(AMOUNT.value);
-    AMOUNT.addEventListener("focusout", event => {
-        checkOnlyNumberCARD(AMOUNT.value)
-            ? validInputStyle(AMOUNT)
-            : invalidInputStyle(AMOUNT);
-    });
+};
 
-};*/
+// const AMOUNT = document.querySelector("#amount");
+//     console.log(AMOUNT.value);
+//     AMOUNT.addEventListener("focusout", event => {
+//         checkOnlyNumberCARD(AMOUNT.value)
+//             ? validInputStyle(AMOUNT)
+//             : invalidInputStyle(AMOUNT);
+//     });
